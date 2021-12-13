@@ -1701,7 +1701,7 @@ const wait = __nccwpck_require__(258);
 async function run() {
   try {
     const ms = core.getInput('milliseconds');
-    core.info(`Waiting ${ms} milliseconds ...`);
+    core.info(`Hello world`);
 
     core.debug((new Date()).toTimeString()); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
     await wait(parseInt(ms));
