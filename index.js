@@ -3,7 +3,7 @@ const github = require('@actions/github');
 
 try {
   console.log(github.context);
-  github.rest.issues.createComment({
+  github.rest.issues.create({
     owner: github.context.payload.repository.owner.login,
     repo: github.context.payload.repository.name,
     body: `Hi \n\nThis is a test action.\n\nTime: ${time}`
