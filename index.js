@@ -11,7 +11,6 @@ try {
   octokit.issues.create({
     owner,
     repo,
-    title: `${tomorrow.format('YYYY-MM-DD')} Weekly Sync`,
     labels: ['☑ Meeting Notes'],
     assignees: ['GMAN']
   });
