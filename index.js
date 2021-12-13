@@ -3,17 +3,21 @@ const github = require('@actions/github');
 const token = core.getInput('repo-token', { required: true })
 const octokit = github.getOctokit(token)
 
-try {
+async function run() {
+  try {
 
-  const { context } = github
-  const { owner, repo } = context.repo
+    const { context } = github
+    const { owner, repo } = context.repo
 
- await octokit.issues.create({
-    owner,
-    repo,
-    assignees: ['gusshawstewart']
-  });
+    await octokit.issues.create({
+      owner,
+      repo,
+      assignees: ['gusshawstewart']
+    });
 
-} catch (error) {
+    } catch (error) {
   core.setFailed(error.message);
+  }
 }
+
+run();
