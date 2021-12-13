@@ -8,9 +8,7 @@ try {
   const { context } = github
   const { owner, repo } = context.repo
 
-  console.log
-
-  octokit.issues.create({
+ await octokit.issues.create({
     owner,
     repo,
     assignees: ['gusshawstewart']
