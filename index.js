@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 try {
-  console.log(github.context.payload.repository.name);
+  console.log(github.context);
   github.rest.issues.createComment({
     owner: github.context.payload.repository.owner.login,
     repo: github.context.payload.repository.name,
