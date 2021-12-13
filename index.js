@@ -8,11 +8,12 @@ try {
   const { context } = github
   const { owner, repo } = context.repo
 
+  console.log
+
   octokit.issues.create({
     owner,
     repo,
-    labels: ['☑ Meeting Notes'],
-    assignees: ['GMAN']
+    assignees: ['gusshawstewart']
   });
 
 } catch (error) {
